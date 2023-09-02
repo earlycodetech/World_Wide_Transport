@@ -51,7 +51,7 @@
                         </li>
                     @else
                         <li class="nav-item">
-                            <a href="{{ route('locations.create') }}" class="nav-link"> Book a Ride </a>
+                            <a href="{{ route('booking.form') }}" class="nav-link"> Book a Ride </a>
                         </li>
                     @endif
 

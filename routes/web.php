@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\LocationsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
@@ -76,3 +77,5 @@ Route::resource('locations', LocationsController::class);
 
 Route::middleware('auth')->get('profile', [ProfileController::class, 'show_profile'])->name('user.profile');
 Route::middleware('auth')->patch('profile', [ProfileController::class, 'update_profile'])->name('user.profile.update');
+
+Route::get('book-a-ride', [BookingController::class, 'booking_form'])->name('booking.form');
