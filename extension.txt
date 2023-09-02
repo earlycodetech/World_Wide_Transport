@@ -1,0 +1,10 @@
+Laravel Artisan - Ryan Naddy
+Laravel Blade Snippets by Winnie Lin    
+Laravel Snippets by Winniie Lin
+Laravel Extra Intellisense by Amir
+Laravel goto view by Codingyu
+Laravel Blade formatter by Shuhei Hayashibara
+Laravel Blade Spacer by Austin Cameron
+Laravel goto Controller by ctf0
+Laravel goto  View by ctf0
+Laravel Assist by tiansin
