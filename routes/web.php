@@ -78,4 +78,9 @@ Route::resource('locations', LocationsController::class);
 Route::middleware('auth')->get('profile', [ProfileController::class, 'show_profile'])->name('user.profile');
 Route::middleware('auth')->patch('profile', [ProfileController::class, 'update_profile'])->name('user.profile.update');
 
-Route::get('book-a-ride', [BookingController::class, 'booking_form'])->name('booking.form');
+Route::middleware('auth')->get('book-a-ride', [BookingController::class, 'booking_form'])->name('booking.form');
+
+Route::middleware('auth')->post('ride/new', [BookingController::class, 'book_new_ride'])->name('booking.create');
+
+Route::middleware(['auth','check.admin'])->get('all-bookings', [BookingController::class, 'admin_bookings'])->name('admin.bookings');
+Route::middleware(['auth'])->get('bookings', [BookingController::class, 'user_bookings'])->name('user.bookings');

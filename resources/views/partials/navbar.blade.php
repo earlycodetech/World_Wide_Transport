@@ -17,18 +17,18 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link"> Home </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"> About </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"> Services </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"> Contact </a>
-                </li>
 
 
                 @guest
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> About </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> Services </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"> Contact </a>
+                    </li>
                     @if (Route::has('login'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -42,6 +42,9 @@
                     @endif
                 @else
                     @if (Auth::user()->role == 'admin')
+                        <li class="nav-item">
+                            <a href="{{ route('locations.create') }}" class="nav-link"> All Bookings </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{{ route('locations.create') }}" class="nav-link"> Add Location </a>
                         </li>

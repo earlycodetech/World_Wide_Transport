@@ -23,6 +23,11 @@
                 <div class="col-lg-8 my-3">
 
                     <div class="card mb-4">
+                        <div class="card-header text-end">
+                            <a href="{{ route('user.bookings') }}" class="btn btn-primary">
+                                My Bookings
+                            </a>
+                        </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">

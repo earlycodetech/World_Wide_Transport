@@ -20,4 +20,15 @@ class Bookings extends Model
         'departure_date',
         'status'
     ];
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function location()
+    {
+        return $this->belongsTo(Locations::class, 'location_id');
+    }
 }
